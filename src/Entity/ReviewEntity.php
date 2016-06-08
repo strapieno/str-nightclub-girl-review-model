@@ -4,6 +4,8 @@ namespace Strapieno\NightClubGirlReview\Model\Entity;
 use Matryoshka\Model\Object\ActiveRecord\AbstractActiveRecord;
 use Strapieno\NightClub\Model\Entity\Reference\NightClubReferenceAwareInterface;
 use Strapieno\NightClub\Model\Entity\Reference\NightClubReferenceAwareTrait;
+use Strapieno\NightClubGirl\Model\Entity\Reference\GirlReferenceAwareInterface;
+use Strapieno\NightClubGirl\Model\Entity\Reference\GirlReferenceAwareTrait;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareInterface;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareTrait;
 use Strapieno\Utils\Model\Entity\EntityInterface;
@@ -17,10 +19,10 @@ use Zend\Stdlib\Hydrator\HydratorAwareInterface;
 class ReviewEntity extends AbstractActiveRecord implements ReviewInterface,
     EntityInterface,
     DateHistoryAwareInterface,
-    HydratorAwareInterface
-//TODO add reference
-//NightClubReferenceAwareInterface
+    HydratorAwareInterface,
+    GirlReferenceAwareInterface
 {
     use ReviewTrait;
     use DateHistoryAwareTrait;
+    use GirlReferenceAwareTrait;
 }

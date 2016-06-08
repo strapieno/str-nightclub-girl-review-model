@@ -2,6 +2,7 @@
 namespace Strapieno\NightClubGirlReview\Model\Hydrator\Mongo;
 
 use Matryoshka\Model\Hydrator\Strategy\HasOneStrategy;
+use Strapieno\NightClubGirl\Model\Entity\Reference\GirlReference;
 use Strapieno\NightClubGirlReview\Model\Entity\Object\RatingObject;
 use Strapieno\Utils\Hydrator\Mongo\DateHistoryHydrator;
 
@@ -19,12 +20,10 @@ class ReviewModelMongoHydrator extends DateHistoryHydrator
             new HasOneStrategy(new RatingObject(), false)
         );
 
-        /*
         $this->addStrategy(
-            'night_club_reference',
-        // TODO add referece
-           new HasOneStrategy(new NightClubReference(), false)
+            'girl_reference',
+           new HasOneStrategy(new GirlReference(), false)
         );
-        */
+
     }
 }
