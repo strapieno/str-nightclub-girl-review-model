@@ -18,7 +18,7 @@ return [
     'mongocollection' => [
         'DataGateway\Mongo\Review' => [
             'database' => 'Mongo\Db',
-            'collection' => 'nightclub-review',
+            'collection' => 'nightclub-girl-review',
         ],
     ],
     'matryoshka-objects' => [
@@ -70,7 +70,7 @@ return [
 
         ],
         'Strapieno\NightClubGirlReview\Model\InputFilter\DefaultInputFilter' => [
-            "nightclub_id" => [
+            "girl_id" => [
                 'name' => 'girl_id',
                 'validators' => [
                     // TODO change validator
