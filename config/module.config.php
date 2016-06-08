@@ -16,7 +16,7 @@ return [
         ],
     ],
     'mongocollection' => [
-        'DataGateway\Mongo\Review' => [
+        'DataGateway\Mongo\NightClubGirReview' => [
             'database' => 'Mongo\Db',
             'collection' => 'nightclub-girl-review',
         ],
@@ -29,7 +29,7 @@ return [
     ],
     'matryoshka-models' => [
         'Strapieno\NightClubGirlReview\Model\ReviewModelService' => [
-            'datagateway' => 'DataGateway\Mongo\Review',
+            'datagateway' => 'DataGateway\Mongo\NightClubGirReview',
             'type' => 'Strapieno\NightClubGirlReview\Model\ReviewModelService',
             'object' => 'NightClubGirlReview',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
