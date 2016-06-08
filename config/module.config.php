@@ -72,16 +72,13 @@ return [
         'Strapieno\NightClubGirlReview\Model\InputFilter\DefaultInputFilter' => [
             "girl_id" => [
                 'name' => 'girl_id',
-                'validators' => [
-                    // TODO change validator
-                    'nightclubentityexist' => [
-                        'name' => 'nightclubentityexist',
-                        'break_chain_on_failure' => true
-                    ]
-                ]
+                'require' => false,
+                'allow_empty' => true
             ],
             "review_body" => [
                 'name' => 'review_body',
+                'require' => false,
+                'allow_empty' => true,
                 'validators' => [
                     'stringlength' => [
                         'name' => 'stringlength',
